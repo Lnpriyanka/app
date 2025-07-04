@@ -1,22 +1,20 @@
 import streamlit as st
 import pandas as pd
 
-st.title("🎓 My Python Course Tracker")
-
-# Load CSV file from the repo
+# Load your data
 df = pd.read_csv("data.csv")
 
-st.subheader("📋 Full Student Data")
+st.title("📘 Python Course - Student Tracker")
+
+# Display the table
 st.dataframe(df)
 
-# Filter: Passed Students
-st.subheader("✅ Passed Students")
-st.dataframe(df[df["Status"] == "Passed"])
+# ➕ Add a Download button
+csv = df.to_csv(index=False).encode('utf-8')
 
-# Filter: Completed OOP
-st.subheader("🧠 Students Who Completed OOP")
-st.dataframe(df[df["Completed OOP"] == "Yes"])
-
-# Bar chart of scores
-st.subheader("📊 Score Chart")
-st.bar_chart(df.set_index("Student Name")["Score (%)"])
+st.download_button(
+    label="📥 Download CSV",
+    data=csv,
+    file_name='student_tracker.csv',
+    mime='text/csv'
+)
