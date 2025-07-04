@@ -1,6 +1,8 @@
-Name,Age,City
-Alice,24,New York
-Bob,30,San Francisco
-Charlie,22,Bangalore
-David,28,Mumbai
-Eva,26,London
+Student Name,Email,Completed Basics,Completed OOP,Score (%),Status
+Alice,alice@example.com,Yes,Yes,89,Passed
+Bob,bob@example.com,Yes,No,65,On Track
+Charlie,charlie@example.com,No,No,40,Needs Attention
+David,david@example.com,Yes,Yes,94,Passed
+Eva,eva@example.com,Yes,No,73,On Track
+Frank,frank@example.com,No,No,28,Needs Attention
+Grace,grace@example.com,Yes,Yes,88,Passed
